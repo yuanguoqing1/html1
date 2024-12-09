@@ -10,7 +10,21 @@
 		 <!-- 定义作者 -->
 		<meta name='author' content='Hope'>
 		<title>hope</title>
-		<img>
+		<!--css样式设置 -->
+		<!-- 选择器 -->
+		p{
+			font-size:20px;        <!-- 设置p字体大小-->
+			color:red;
+		}
+		<!-- 类选择器 -->
+		.class {								<!--前面要加个.-->
+			font-size:12px
+		}
+		<!-- id选择器 -->
+		#id{
+			font-size:12px
+		}
+		
 	</head>
 	<body>
 		<!-- 定义头部区域 -->
@@ -37,6 +51,59 @@
 		<div><a href='www.baidu.com' title='我是一个超链接' target='_self'>百度的超链接</a> <!--target _self在本页面跳转 -->
 		<a href='www.baidu.com' title='我是一个超链接' target='_blank'>重新打开一个页面打开百度的超链接</a><!--target _blank在新页面跳转 -->
 		</div>
+		<div>
+		<!--文本格式化标签-->
+		<b>我是粗体标签<b>   <br/>
+		<big>我是大号字</big><br/>
+		<em>我是着重字标签</em><br/>
+		<i>我是斜体字</i><br/>
+		<small>我是小号字</small><br/>
+		<sub>我是下标字</sub><br/>
+		<sup>我是上标字</sup><br/>
+		<ins>我是插入字</ins><br/><br/>
+		<del>定义删除字</del><br/>
+		<q>我是引号</q><br/>
+		<blockquote>我是缩进</blockquote><br/>
+		<abbr title='你猜猜我是谁'>我是缩略词</abbr><br/>
+		<address>我是文章作者标签</address>
+		</div>
+		<!-- 表格标签 border代表边框线数量 -->
+		<table border='2'>
+			<thead>
+			<th>我是列标题 </th>
+			<th>我是列标题</th>
+			</thead>
+			<tbody>
+			<tr>
+				<td>我是行标题</td>
+			</tr>
+			</tbody>
+			<tfoot>
+			<tr>
+				<td>我是行标题</td>
+			</tr></tfoot>
+		</table>
+		<!-- 这是一个与后端的交互地可以将form中的传到后端 -->
+		<form method='post' action='1.php'>
+			我是一个输入框:<input type='text' name='myname' placeholder='我是一个占位符'/><br/>
+			我是一个密码形式的输入框:<input type='password' name='myword'/><br/>
+			我是一个数字类型输入框:<input type='number'/><br/>
+			我是一个网址输入栏(数字框的值需以http://或者https://开头,且后面必须有内容):<input type='url'/><br/>
+			我是一个邮箱输入栏(有@)：<input type='email'/><br/>
+			我是一个文本域输入框:<textarea cols='20' rows='10'>我是一个超大文本域输入框</textarea> 
+		</form>
+		<!-- label标签与for和id相同会关联 -->
+		<label for='execise'>练习<input type='radio' id='execise'/></label><br/>
+	
+		<label for='people'>男<input type='checkbox' id='people'/></label><label for='people2'>女<input type='checkbox' id='people2'/></label>
+		<!-- 下拉标签 -->
+		<select>
+			<option value='1'>1</option>
+			<option value='2'>2</option>
+			<option value='3' selected='selected'>我是默认</option>
+		</select>
+		<input type='submit' value='我是提交按钮'>
+		<input type='reset' value='我是重置按钮 '>        <!-- 在form标签中使用重置form标签内的数据-->
 		<footer>我是一个底部标签</footer>
 	</body>
 </html>
